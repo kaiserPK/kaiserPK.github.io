@@ -1,0 +1,152 @@
+body {
+  font-family: 'Roboto Slab', Helvetica, sans-serif;
+}
+
+h1 {
+  font-family: 'Baloo Tamma', Helvetica, sans-serif;
+}
+
+/******************************************************************** Intro *****************************************************************************/
+#intro {
+  z-index:0;
+  background: -o-linear-gradient(top, #000, #bb2115);
+  background: -ms-linear-gradient(top, #000, #bb2115);
+  background: -moz-linear-gradient(top, #000, #bb2115);
+  background: -webkit-linear-gradient(top, #000, #bb2115);
+  background: linear-gradient(top, #000, #bb2115);
+  filter:progid: DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='#bb2115');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='#bb2115')";
+  text-align: center;
+  vertical-align: middle;
+  color: #fff;
+}
+
+#intro #intro-name {
+  font-size: 120px;
+}
+
+#intro #intro-body {
+  font-size: 20px;
+}
+
+#canvas-wrap {
+  overflow: hidden;
+  position: relative;
+}
+
+#landscape, #grass, #moon {
+  width: 100%;
+  position: absolute;
+}
+
+#moon {
+  height: 300px;
+  top: 0;
+  z-index: 3;
+  background: url(../assets/img/moon.png) no-repeat;
+  background-position: 1150px;
+  background-size: 300px;
+}
+
+#landscape, #grass {
+  bottom: 0;
+}
+
+#landscape {
+  height: 300px;
+  z-index: 1;
+  background: url(../assets/img/landscape.png) repeat-x 0 0;
+  background-position: -250px;
+  background-size: auto 300px;
+}
+
+#grass {
+  height: 62px;
+  z-index: 2;
+  background: url(../assets/img/grass.png) repeat-x left 10px;
+}
+
+#overlay {
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 45%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+@media(max-width:768px) {
+  #intro #intro-name {
+    font-size: 70px;
+  }
+
+  #moon {
+    background-position: 100px;
+    background-size: 200px;
+  }
+
+  #landscape {
+    background-position: 160px;
+  }
+
+  #overlay {
+    top: 50%;
+  }
+}
+
+/************************************************************** Fade-in animation *************************************************************************/
+@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+.fade-in {
+  opacity:0;  /* make things invisible upon start */
+  -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+.fade-in.one{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  animation-delay: .2s;
+}
+
+.fade-in.two{
+  -webkit-animation-delay: .6s;
+  -moz-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.fade-in.three{
+  -webkit-animation-delay: 1.3s;
+  -moz-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+.fade-in.four{
+  -webkit-animation-delay: 1.6s;
+  -moz-animation-delay: 1.6s;
+  animation-delay: 1.6s;
+}
+
+.fade-in.five{
+  -webkit-animation-delay: 2.0s;
+  -moz-animation-delay: 2.0s;
+  animation-delay: 2.0s;
+}
+
+.fade-in.six{
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
