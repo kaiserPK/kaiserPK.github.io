@@ -1,4 +1,10 @@
+body, html {
+  padding: 0;
+  margin: 0;
+}
+
 body {
+  background-color: #000;
   font-family: 'Roboto Slab', Helvetica, sans-serif;
 }
 
@@ -8,7 +14,11 @@ h1 {
 
 /******************************************************************** Intro *****************************************************************************/
 #intro {
-  z-index:0;
+  position: fixed;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 0;
   background: -o-linear-gradient(top, #000, #bb2115);
   background: -ms-linear-gradient(top, #000, #bb2115);
   background: -moz-linear-gradient(top, #000, #bb2115);
@@ -16,10 +26,12 @@ h1 {
   background: linear-gradient(top, #000, #bb2115);
   filter:progid: DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='#bb2115');
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#000', EndColorStr='#bb2115')";
-  text-align: center;
-  vertical-align: middle;
-  color: #fff;
+  transition: opacity 2s;
 }
+
+/*#intro.morning {
+  opacity: 0.9;
+}*/
 
 #intro #intro-name {
   font-size: 120px;
@@ -34,64 +46,155 @@ h1 {
   position: relative;
 }
 
-#landscape, #grass, #moon {
+#landscape, #grass, #moon, #sun {
   width: 100%;
   position: absolute;
 }
 
-#moon {
-  height: 300px;
-  top: 0;
-  z-index: 3;
-  background: url(../assets/img/moon.png) no-repeat;
-  background-position: 1150px;
-  background-size: 300px;
-}
-
-#landscape, #grass {
-  bottom: 0;
-}
-
 #landscape {
+  bottom: 66px;
   height: 300px;
-  z-index: 1;
-  background: url(../assets/img/landscape.png) repeat-x 0 0;
+  z-index: 2;
+  background: url('../assets/img/landscape.png') repeat-x 0 0;
   background-position: -250px;
   background-size: auto 300px;
 }
 
 #grass {
-  height: 62px;
-  z-index: 2;
-  background: url(../assets/img/grass.png) repeat-x left 10px;
+  bottom: 0;
+  height: 150px;
+  z-index: 4;
+  background: url('../assets/img/grass.png') repeat-x left 10px;
+  background-size: auto 150px;
+}
+
+#moon {
+  height: 300px;
+  top: 0;
+  z-index: 1;
+  background: url('../assets/img/moon.png') no-repeat;
+  background-position: 100%;
+  background-size: 300px;
+}
+
+#sun {
+  height: 450px;
+  z-index: 1;
+  background: url('../assets/img/sun.png') no-repeat;
+  background-position: 50%;
+  background-size: 450px;
+}
+
+#soil {
+  margin-top: -90px;
+  height: 269;
+  background: url('../assets/img/soil.png');
 }
 
 #overlay {
   width: 100%;
   display: block;
   position: absolute;
-  top: 45%;
+  top: 35%;
   transform: translateX(-50%);
   transform: translateY(-50%);
   margin: auto;
+  z-index: 3;
 }
 
 @media(max-width:768px) {
   #intro #intro-name {
     font-size: 70px;
   }
-
-  #moon {
-    background-position: 100px;
-    background-size: 200px;
-  }
-
+  
   #landscape {
     background-position: 160px;
   }
 
+  #moon {
+    background-position: 50%;
+    background-size: 200px;
+  }
+
+  #soil {
+    margin-top: 0;
+    background-position: -350px;
+  }
+
   #overlay {
     top: 50%;
+  }
+}
+
+/******************************************************************* Content *****************************************************************************/
+#content {
+  color: #000;
+  position: absolute;
+  top: 100%;
+  background-color: #fff;
+  width: 100%;
+  min-height: 2100px; 
+}
+
+/******************************************************************* Navbar *****************************************************************************/
+.navbar-custom.affix {
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar-custom {
+  top: -66px;
+  padding-top: 8px; 
+  padding-bottom: 8px;
+  background-color: #000;
+  border-bottom: solid;
+}
+  .navbar-custom .nav li > a {
+    color: #fff;
+  }
+  .navbar-custom .nav li > a:hover {
+    background-color: #000;
+    color: #a9a9a9;
+  }
+  .navbar-custom .nav li > a:focus,
+  .navbar-custom .nav li > a:active {
+    background-color: transparent;
+  }
+  .navbar-custom .nav li.active a {
+    color: #fff;
+  }
+  .navbar-custom .nav li.active a:hover {
+    color: #a9a9a9;
+  }
+
+#nav-sub {
+  margin-top: -66px;
+  height: 66px;
+  background-color: #000;
+}
+
+@media(min-width: 768px) {
+  .navbar-custom .nav {
+    width: 100%;
+    text-align: center;
+  }
+    .navbar-custom .nav li {
+      float: none;
+      font-size: 20px;
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+}
+
+@media(max-width: 768px) {
+  .icon-bar {
+    background-color: #fff;
+  }
+
+  .navbar-brand {
+    margin-top: -10px;
   }
 }
 

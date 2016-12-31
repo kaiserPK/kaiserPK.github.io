@@ -11,7 +11,90 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
+  </head>
+  
+  <body>
+    <!-- Introduction -->
+    <header id="intro">
+      <div id="canvas-wrap">
+        <canvas id="pixie"></canvas>
+        <div id="ShootingStarParams"></div>
+        <div class="parallax-layer" id="landscape" data-parallax-speed="0.5" data-max-scroll="900"></div>
+        <div class="parallax-layer" id="grass" data-parallax-speed="1" data-max-scroll="900"></div>
+        <div class="parallax-layer" id="moon" data-parallax-speed="1.8" data-max-scroll="900"></div>
+        <div class="parallax-layer" id="sun" data-parallax-speed="2" data-max-scroll="900"></div>
+        <div class="col-lg-12" id="overlay">
+          <h1 id="intro-name"> KAISER KIM </h1>
+          <p id="intro-body"> Web Developer </p>
+        </div>
+      </div>
+    </header>
 
+    <div id="content">
+      <!-- Navigation -->
+      <nav class="navbar navbar-custom navbar-static-top" data-spy="affix" data-offset-top="755" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="sr-only"> Toggle navigation </span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand hidden-md hidden-lg" href="#">
+            <img src="assets/img/my_logo.png" height="50px">
+          </a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#projects"> PROJECTS </a>
+            </li>
+            <li>
+              <a href="#work"> WORK </a>
+            </li>
+            <li>
+              <a href="#skills"> SKILLS </a>
+            </li>
+            <a class="scroll-top hidden-xs hidden-sm" href="#">
+              <img src="assets/img/my_logo.png" height="50px">
+            </a>
+            <li>
+              <a href="#about"> ABOUT </a>
+            </li>
+            <li>
+              <a href="#contact"> CONTACT </a>
+            </li>
+            <li>
+              <a href="assets/files/Resume.pdf" target="_blank"> RESUME </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Separator for Mobile -->
+      <div id="nav-sub hidden-md-up"></div>
+      
+      <!-- Soil Divider -->
+      <div id="soil"></div>
+
+      <!-- Projects -->
+      <section>
+        <h1>
+          Hi
+        </h1>
+      </section>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/pixie.js"></script>
+    <script src="js/shootingstar.js"></script>
+    <script src="js/index.js"></script>
+    
     <!-- Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,28 +105,6 @@
       ga('create', 'UA-89564629-1', 'auto');
       ga('send', 'pageview');
     </script>
-  </head>
   
-  <body>
-    <header id="intro">
-      <div id="canvas-wrap">
-        <canvas id="pixie"></canvas>
-        <div id="moon"></div>
-        <div id="landscape"></div>
-        <div id="grass"></div>
-        <div class="col-lg-12" id="overlay">
-          <h1 id="intro-name"> KAISER KIM </h1>
-          <p id="intro-body"> Web Developer </p>
-        </div>
-      </div>
-    </header>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="js/parallax.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/pixie.js"></script>
-    <script src="js/index.js"></script>
   </body>
 </html>

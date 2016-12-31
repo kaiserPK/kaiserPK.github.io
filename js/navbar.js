@@ -1,28 +1,29 @@
-$('#nav').affix({
+/*$('#nav').affix({
   offset: {
-    top: $('header').height()-$('#nav').height() - 10
+    top: $('header').height()-$('#nav').height
   }
-});
+});*/
 
 /* highlight the top nav as scrolling occurs */
 $('body').scrollspy({ target: '#nav', offset: -60 })
 
-/* brand fade in if navbar is near */
 $(window).scroll(function() {
-  if ( $(this).scrollTop() > 550 ) {
-    $('.fader').fadeIn(600);
-  }
-  else {
-    $('.fader').fadeOut(600);
-  }
-});
-
-$(window).scroll(function() {
-  if ( $(this).scrollTop() > 848 ) {
-    $('#content').css('padding-top', 50);
+  if ( $(this).scrollTop() > 755 ) {
+    if ( window.innerWidth > 755 ) {
+      $('#content').css('padding-top', 75);
+    }
+    else {
+      $('#content').css('padding-top', 0);
+    }
+    $('.navbar-custom').css('background-color', 'white');
+    $('.navbar-custom .nav li > a').css('color', 'black');
+    $('.icon-bar').css('background-color', 'black');
   }
   else {
     $('#content').css('padding-top', 0);
+    $('.navbar-custom').css('background-color', 'black');
+    $('.navbar-custom .nav li > a').css('color', 'white');
+    $('.icon-bar').css('background-color', 'white');
   }
   /* Alternate way using jumbotron margins */
   /*
@@ -53,4 +54,14 @@ $('#nav .navbar-nav li>a').click(function(event) {
   $('body, html').stop().animate({scrollTop: pos}, 1500, 'easeInOutExpo');
   $('.navbar-collapse').collapse('hide');
   event.preventDefault();
+});
+
+$(document).ready(function() {
+  if ( window.innerWidth <= 750 ) {
+    $('.navbar-custom').removeAttr('data-spy');
+    $('.navbar-custom').removeAttr('data-offset-top');
+    $('.navbar-custom').removeClass('navbar-static-top');
+    $('.navbar-custom').addClass('navbar-fixed-top');
+    $('.navbar-custom').css('top', 0);
+  }
 });

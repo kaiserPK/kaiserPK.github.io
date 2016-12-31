@@ -14,7 +14,7 @@ var WIDTH = window.innerWidth,
       container.style.width = WIDTH+'px';
       container.style.height = HEIGHT+'px';
       canvas.width = WIDTH;
-      canvas.height = HEIGHT;
+      canvas.height = HEIGHT - 100;
     }
     
 setDimensions();
