@@ -9,7 +9,11 @@ body {
 }
 
 h1 {
-  font-family: 'Baloo Tamma', Helvetica, sans-serif;
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 25px;
 }
 
 /******************************************************************** Intro *****************************************************************************/
@@ -33,13 +37,14 @@ h1 {
   opacity: 0.9;
 }*/
 
-#intro #intro-name {
-  font-size: 120px;
-}
-
-#intro #intro-body {
-  font-size: 20px;
-}
+  #intro #intro-name {
+    font-family: 'Baloo Tamma', Helvetica, sans-serif;
+    font-size: 120px;
+  }
+  
+  #intro #intro-body {
+    font-size: 20px;
+  }
 
 #canvas-wrap {
   overflow: hidden;
@@ -53,18 +58,18 @@ h1 {
 
 #landscape {
   bottom: 66px;
-  height: 300px;
+  height: 350px;
   z-index: 2;
-  background: url('../assets/img/landscape.png') repeat-x 0 0;
-  background-position: -250px;
-  background-size: auto 300px;
+  background: url('../assets/img/landscape.png') repeat-x;
+  background-position: -450px;
+  background-size: auto 350px;
 }
 
 #grass {
   bottom: 0;
   height: 150px;
   z-index: 4;
-  background: url('../assets/img/grass.png') repeat-x left 10px;
+  background: url('../assets/img/grass.png') repeat-x left;
   background-size: auto 150px;
 }
 
@@ -88,7 +93,7 @@ h1 {
 #soil {
   margin-top: -90px;
   height: 269;
-  background: url('../assets/img/soil.png');
+  background: url('../assets/img/soil.png') repeat-x;
 }
 
 #overlay {
@@ -102,7 +107,7 @@ h1 {
   z-index: 3;
 }
 
-@media(max-width:768px) {
+@media(max-width: 768px) {
   #intro #intro-name {
     font-size: 70px;
   }
@@ -118,7 +123,8 @@ h1 {
 
   #soil {
     margin-top: 0;
-    background-position: -350px;
+    height: 100px;
+    background-size: auto 100px;
   }
 
   #overlay {
@@ -133,28 +139,32 @@ h1 {
   top: 100%;
   background-color: #fff;
   width: 100%;
-  min-height: 2100px; 
+}
+
+#content section {
+  padding-top: 50px;
+}
+
+#content h2.description {
+  margin-bottom: 50px;
 }
 
 /******************************************************************* Navbar *****************************************************************************/
+.navbar-custom {
+  padding-bottom: 8px;
+  background-color: #000;
+  border-bottom: solid;
+}
 .navbar-custom.affix {
   top: 0;
   width: 100%;
   z-index: 999;
 }
-
-.navbar-custom {
-  top: -66px;
-  padding-top: 8px; 
-  padding-bottom: 8px;
-  background-color: #000;
-  border-bottom: solid;
-}
   .navbar-custom .nav li > a {
     color: #fff;
   }
   .navbar-custom .nav li > a:hover {
-    background-color: #000;
+    background-color: transparent;
     color: #a9a9a9;
   }
   .navbar-custom .nav li > a:focus,
@@ -162,9 +172,6 @@ h1 {
     background-color: transparent;
   }
   .navbar-custom .nav li.active a {
-    color: #fff;
-  }
-  .navbar-custom .nav li.active a:hover {
     color: #a9a9a9;
   }
 
@@ -175,6 +182,14 @@ h1 {
 }
 
 @media(min-width: 768px) {
+  .navbar-custom {
+    top: -66px;
+    padding-top: 8px;
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+  }
+
   .navbar-custom .nav {
     width: 100%;
     text-align: center;
@@ -193,9 +208,62 @@ h1 {
     background-color: #fff;
   }
 
+  .navbar-toggle {
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
   .navbar-brand {
     margin-top: -10px;
   }
+
+  .navbar-collapse {
+    margin-top: 8px;
+    margin-bottom: -8px;
+  }
+}
+
+/****************************************************************** About Me *****************************************************************************/
+#about {
+  height: 900px;
+}
+
+#about hr {
+  border-color: #000;
+  background-color: #000;
+  color: #000;
+}
+
+#about h3 {
+  line-height: 40px;
+}
+
+#about h4.body {
+  line-height: 30px;
+  font-weight: normal;
+}
+
+.red {
+  color: #bb2115;
+}
+
+@media(min-width: 768px) {
+  .interest-margin {
+    margin-top: -40px;
+  }
+}
+
+/****************************************************************** Projects  *****************************************************************************/
+#projects {
+  height: 900px;
+  color: #fff;
+  background-color: #bb2115;
+}
+
+#projects hr {
+  border-color: #fff;
+  background-color: #fff;
+  color: #fff;
 }
 
 /************************************************************** Fade-in animation *************************************************************************/

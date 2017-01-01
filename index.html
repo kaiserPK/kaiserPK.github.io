@@ -10,10 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   
-  <body>
+  <body data-spy="scroll" data-target=".navbar-custom">
     <!-- Introduction -->
     <header id="intro">
       <div id="canvas-wrap">
@@ -40,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand hidden-md hidden-lg" href="#">
+          <a class="navbar-brand scroll-top hidden-md hidden-lg" href="#">
             <img src="assets/img/my_logo.png" height="50px">
           </a>
         </div>
@@ -48,19 +49,19 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav">
             <li>
+              <a href="#about"> ABOUT </a>
+            </li>
+            <li>
               <a href="#projects"> PROJECTS </a>
             </li>
             <li>
               <a href="#work"> WORK </a>
             </li>
-            <li>
-              <a href="#skills"> SKILLS </a>
-            </li>
             <a class="scroll-top hidden-xs hidden-sm" href="#">
               <img src="assets/img/my_logo.png" height="50px">
             </a>
             <li>
-              <a href="#about"> ABOUT </a>
+              <a href="#skills"> SKILLS </a>
             </li>
             <li>
               <a href="#contact"> CONTACT </a>
@@ -78,11 +79,79 @@
       <!-- Soil Divider -->
       <div id="soil"></div>
 
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <div data-aos="zoom-in-up" data-aos-duration="600">
+                <h1>
+                  ABOUT ME
+                </h1>
+                <hr>
+                <h2 class="description">
+                  A bit about myself
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm interest-margin" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+              <h3><strong> Organization </strong></h3>
+              <img src="assets/img/tt.png" height="100px" alt="">
+              <h4><i> Theta Tau </i></h4>
+              <h4 class="body"> I am an active member of Theta Tau, a professional engineering fraternity </h4>
+            </div>  
+            <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+              <img src="assets/img/me.jpg" class="img-circle" height="200" alt="">
+            </div>
+            <div class="col-lg-3 text-center hidden-xs hidden-sm interest-margin" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+              <h3><strong> Favorite Food </strong></h3>
+              <img src="assets/img/sushi.png" height="100px" alt="">
+              <h4><i> Sushi </i></h4>
+              <h4 class="body"> I can eat sushi all day. Yellowtail, Salmon, and Toro are my favorite! </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+              <h3><strong> Hobby </strong></h3>
+              <img src="assets/img/drawing.png" height="100px" alt="">
+              <h4><i> Drawing </i></h4>
+              <h4 class="body"> I've had a passion for drawing since I was young. I have a knack for drawing faces! </h4>
+            </div>
+            <div class="col-lg-6 text-center about-body interest-margin" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
+              <h3> 
+                Hi There! I'm <span class="red"> KAISER KIM </span>, a Software Developer from Torrance, CA. 
+                I am currently majoring in Computer Engineering at UCSD.
+              </h3>
+              <h3> My dream is to build something that can have a lasting <span class="red"> IMPACT </span> on others. </h3>
+              <img class="hidden-xs hidden-sm" src="assets/img/me.png" height="100px" alt="">
+            </div>
+            <div class="col-lg-3 text-center hidden-xs hidden-sm" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+              <h3><strong> Basketball Team </strong></h3>
+              <img src="assets/img/pelicans.png" height="100px" alt="">
+              <h4><i> Pelicans </i></h4>
+              <h4 class="body"> I've been a Pelicans fan since 2008. I'll stick with them through thick and thin! </h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Projects -->
-      <section>
-        <h1>
-          Hi
-        </h1>
+      <section id="projects">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center" data-aos="zoom-in-up" data-aos-duration="600">
+              <h1>
+                PROJECTS
+              </h1>
+              <hr>
+              <h2 class="description">
+                This is what I've made in my free time
+              </h2>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
 
@@ -93,8 +162,13 @@
     <script src="js/navbar.js"></script>
     <script src="js/pixie.js"></script>
     <script src="js/shootingstar.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/index.js"></script>
-    
+
+    <script>
+      AOS.init();
+    </script>
+
     <!-- Google Analytics -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
