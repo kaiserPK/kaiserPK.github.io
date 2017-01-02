@@ -12,10 +12,6 @@ h1 {
   font-size: 45px;
 }
 
-h2 {
-  font-size: 25px;
-}
-
 /******************************************************************** Intro *****************************************************************************/
 #intro {
   position: fixed;
@@ -145,8 +141,20 @@ h2 {
   padding-top: 50px;
 }
 
-#content h2.description {
+#content h3.description {
   margin-bottom: 50px;
+}
+
+#content hr.black {
+  border-color: #000;
+  background-color: #000;
+  color: #000;
+}
+
+#content hr.white {
+  border-color: #fff;
+  background-color: #fff;
+  color: #fff;
 }
 
 /******************************************************************* Navbar *****************************************************************************/
@@ -225,13 +233,7 @@ h2 {
 
 /****************************************************************** About Me *****************************************************************************/
 #about {
-  height: 900px;
-}
-
-#about hr {
-  border-color: #000;
-  background-color: #000;
-  color: #000;
+  height: 950px;
 }
 
 #about h3 {
@@ -247,23 +249,58 @@ h2 {
   color: #bb2115;
 }
 
+#resume {
+  margin-top: -40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-size: 25px;
+  border: 3px solid;
+  border-radius: 0px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+#resume:hover,
+#resume:focus {
+  transform: scale(1.1);
+}
+
 @media(min-width: 768px) {
   .interest-margin {
     margin-top: -40px;
   }
 }
 
-/****************************************************************** Projects  *****************************************************************************/
+@media(max-width: 768px) {
+  #about {
+    height: 1050px;
+  }
+
+  #resume {
+    margin-top: 25px;
+  }
+}
+/****************************************************************** Projects *****************************************************************************/
 #projects {
   height: 900px;
   color: #fff;
   background-color: #bb2115;
 }
 
-#projects hr {
-  border-color: #fff;
+/******************************************************************* Skills ******************************************************************************/
+#skills {
+  height: 900px;
+  color: #000;
   background-color: #fff;
+}
+
+/******************************************************************* Skills ******************************************************************************/
+#contact {
+  height: 900px;
   color: #fff;
+  background-color: #bb2115;
 }
 
 /************************************************************** Fade-in animation *************************************************************************/
