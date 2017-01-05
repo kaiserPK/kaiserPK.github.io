@@ -129,6 +129,8 @@
 })();
 
 $(document).ready(function() {
-  var shootingStarObj = new ShootingStar("#intro");
-  shootingStarObj.launch();
+  if ( window.innerWidth > 768 ) {
+    var shootingStarObj = new ShootingStar("#intro");
+    shootingStarObj.launch();
+  }
 });

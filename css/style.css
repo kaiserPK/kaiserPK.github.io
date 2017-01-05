@@ -130,7 +130,7 @@ h1 {
 
 /******************************************************************* Content *****************************************************************************/
 #content {
-  color: #000;
+  color: #2f4f4f;
   position: absolute;
   top: 100%;
   background-color: #fff;
@@ -146,22 +146,24 @@ h1 {
 }
 
 #content hr.black {
-  border-color: #000;
-  background-color: #000;
-  color: #000;
+  color: #2f4f4f;
+  background-color: #2f4f4f;
+  border-color: #2f4f4f;
+  border-width: 3px;
 }
 
 #content hr.white {
-  border-color: #fff;
-  background-color: #fff;
   color: #fff;
+  background-color: #fff;
+  border-color: #fff;
+  border-width: 3px;
 }
 
 /******************************************************************* Navbar *****************************************************************************/
 .navbar-custom {
   padding-bottom: 8px;
   background-color: #000;
-  border-bottom: solid;
+  border-bottom: #000 solid;
 }
 .navbar-custom.affix {
   top: 0;
@@ -193,9 +195,9 @@ h1 {
   .navbar-custom {
     top: -66px;
     padding-top: 8px;
-    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
-    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
-    transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -webkit-transition: background .3s ease-in-out, padding .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out, padding .3s ease-in-out;
+    transition: background .3s ease-in-out, padding .3s ease-in-out;
   }
 
   .navbar-custom .nav {
@@ -256,11 +258,12 @@ h1 {
   padding-left: 40px;
   padding-right: 40px;
   font-size: 25px;
-  border: 3px solid;
+  color: #2f4f4f;
+  border: 3px #2f4f4f solid;
   border-radius: 0px;
-  -webkit-transition: all .3s ease-in-out;
-  -moz-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 #resume:hover,
 #resume:focus {
@@ -282,25 +285,274 @@ h1 {
     margin-top: 25px;
   }
 }
+
 /****************************************************************** Projects *****************************************************************************/
 #projects {
-  height: 900px;
-  color: #fff;
-  background-color: #bb2115;
+  height: 1225px;
+  background-color: #f0f0f0;
 }
+
+.project-top {
+}
+
+.project-bot {
+  margin-top: 40px;
+}
+
+.block {
+  display: inline-block;
+  height: 300px;
+  width: 450px;
+  background: #fff;
+  border: 3px #2f4f4f solid;
+}
+
+.project_img {
+  margin-top: 50px;
+}
+
+.project_body {
+  background-color: #f0f0f0;
+  border: solid;
+  top: 92px;
+  bottom: 39px;
+  left: 19px;
+  right: 19px;
+  font-size: 1em;
+  opacity: 0;
+  overflow: hidden;
+  padding: 3.75em 3em;
+  position: absolute;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.project_body:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.project_desc {
+  margin-top: -30px;
+}
+
+.project_btn {
+  margin-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #2f4f4f;
+  background-color: #f0f0f0;
+  border-radius: 0px;
+  border: 3px #2f4f4f solid;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.project_btn:hover,
+.project_btn:focus {
+  color: #2f4f4f;
+  border: 3px #2f4f4f solid;
+  transform: scale(1.1);
+}
+
+#fapl {
+  margin-top: 100px;
+}
+
+#theta-tau {
+  background-color: #ffd700;
+}
+
+#bulb {
+  background-color: #ebc2a8;
+}
+
+#pokemon {
+  background-color: #228b22;
+}
+
+/*.project_body:after,
+.project_body:before {
+  top: 92px;
+  bottom: 39px;
+  left: 19px;
+  right: 19px;
+  display: inline;
+  opacity: 0;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.6s 0.2s;
+  -moz-transition: 0.6s 0.2s;
+  transition: 0.6s 0.2s;
+}*/
 
 /******************************************************************* Skills ******************************************************************************/
 #skills {
-  height: 900px;
-  color: #000;
-  background-color: #fff;
+  height: 985px;
+}
+
+#curr_fav {
+  margin-top: 30px;
+}
+
+#languages {
+  margin-top: 50px;
+}
+
+.skills_img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#code, #tools, .shadow {
+  width: 100%;
+  position: absolute;
+}
+
+.wrapper {
+  height: 150px;
+  width: 120px;
+  margin-left: 220px;
+  transition: all 5s linear 0s;
+}
+.wrapper:active {
+  transform: scale(0);
+}
+.wrapper:active #code {
+  height: 100px;
+  z-index: 1;
+  background: url('../assets/img/code-click.png') no-repeat;
+  background-size: auto 100px;
+}
+.wrapper:active #tools {
+  height: 100px;
+  z-index: 1;
+  background: url('../assets/img/tools-click.png') no-repeat;
+  background-size: auto 100px;
+}
+
+#code {
+  height: 100px;
+  z-index: 1;
+  background: url('../assets/img/code.png') no-repeat;
+  background-size: auto 100px;
+  animation: jump 1s infinite;
+}
+
+#tools {
+  height: 100px;
+  margin-left: 10px;
+  z-index: 1;
+  background: url('../assets/img/tools.png') no-repeat;
+  background-size: auto 100px;
+  animation: jump 1s infinite;
+}
+
+.shadow {
+  height: 50px;
+  width: 40px;
+  bottom: 0;
+  margin-left: 39px;
+  background: rgba(20,20,20,.1);
+  box-shadow: 0px 0 20px 35px rgba(20,20,20,.1);
+  border-radius: 30px / 40px;
+  transform: scaleY(0.3);
+  animation: shrink 1s infinite;
+}
+
+.click_me {
+  margin-top: 20px;
+  margin-left: -120px;
+  animation: pulse 1s linear infinite;
+}
+
+@keyframes jump {
+  0% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    top: 30px;
+    animation-timing-function: ease-out;
+  }
+  55% {
+    top: 40px;
+    animation-timing-function: ease-in;
+  }
+  65% {
+    top: 20px;
+    animation-timing-function: ease-out;
+  }
+  95% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    top: 0;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes shrink {
+  0% {
+    bottom: 0;
+    animation-timing-function: ease-in;
+  }
+  50% {
+    bottom: 20px;
+    margin-left: 49px;
+    width: 20px;
+    height: 5px;
+    background: rgba(20,20,20,.3);
+    box-shadow: 0px 0 20px 35px rgba(20,20,20,.3);
+    border-radius: 20px / 20px;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    bottom: 0;
+    margin-left: 39px;
+    height: 50px;
+    width: 40px;
+    background: rgba(20,20,20,.1);
+    box-shadow: 0px 0 20px 35px rgba(20,20,20.1);
+    border-radius: 30px / 40px;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes pulse {
+  0% { 
+    transform: scale(1); 
+    animation-timing-function: ease-in;
+  }
+  50% { 
+    transform: scale(.95); 
+    animation-timing-function: ease-out;
+  }
+  55% { 
+    transform: scale(.9);
+    animation-timing-function: ease-in;
+  }
+  60% { 
+    transform: scale(.95);
+    animation-timing-function: ease-out;
+  }
+  95% { 
+    transform: scale(1); 
+    animation-timing-function: ease-in;  
+  }
+  100% { 
+    transform: scale(1);
+    animation-timing-function: ease-in;
+  }
 }
 
 /******************************************************************* Skills ******************************************************************************/
 #contact {
   height: 900px;
   color: #fff;
-  background-color: #bb2115;
+  background-color: #2f4f4f;
 }
 
 /************************************************************** Fade-in animation *************************************************************************/

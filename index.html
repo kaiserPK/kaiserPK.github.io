@@ -19,7 +19,7 @@
     <header id="intro">
       <div id="canvas-wrap">
         <canvas id="pixie"></canvas>
-        <div class="hidden-xs hidden-sm" id="ShootingStarParams"></div>
+        <div id="ShootingStarParams"></div>
         <div class="parallax-layer" id="landscape" data-parallax-speed="0.5" data-max-scroll="900"></div>
         <div class="parallax-layer" id="grass" data-parallax-speed="1" data-max-scroll="900"></div>
         <div class="parallax-layer" id="moon" data-parallax-speed="1.8" data-max-scroll="900"></div>
@@ -85,18 +85,14 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <div data-aos="zoom-in-up" data-aos-duration="600">
-                <h1>
-                  ABOUT ME
-                </h1>
+                <h1> ABOUT ME </h1>
                 <hr class="black">
-                <h3 class="description">
-                  A bit about myself
-                </h3>
+                <h3 class="description"> A bit about myself </h3>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 text-center hidden-xs hidden-sm interest-margin" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md interest-margin" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
               <h3><strong> Organization </strong></h3>
               <img src="assets/img/tt.png" height="100px" alt="">
               <h4><i> Theta Tau </i></h4>
@@ -105,7 +101,7 @@
             <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
               <img src="assets/img/me.jpg" class="img-circle" height="250" alt="">
             </div>
-            <div class="col-lg-3 text-center hidden-xs hidden-sm interest-margin" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md interest-margin" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
               <h3><strong> Favorite Food </strong></h3>
               <img src="assets/img/sushi.png" height="100px" alt="">
               <h4><i> Sushi </i></h4>
@@ -113,7 +109,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 text-center hidden-xs hidden-sm" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
               <h3><strong> Hobby </strong></h3>
               <img src="assets/img/drawing.png" height="100px" alt="">
               <h4><i> Drawing </i></h4>
@@ -124,9 +120,9 @@
                 Hi There! I'm <span class="red"> KAISER KIM </span>, a Software Developer from Torrance, CA. 
                 I am currently majoring in Computer Engineering at UCSD.
               </h3>
-              <h3> My <span class="red"> DREAM </span> is to build something that can have a lasting <span class="red"> IMPACT </span> on others. </h3>
+              <h3> My <span class="red"> DREAM </span> is to build a product that can have a lasting <span class="red"> IMPACT </span> on others. </h3>
             </div>
-            <div class="col-lg-3 text-center hidden-xs hidden-sm" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
               <h3><strong> Basketball Team </strong></h3>
               <img src="assets/img/pelicans.png" height="100px" alt="">
               <h4><i> Pelicans </i></h4>
@@ -146,14 +142,68 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center" data-aos="zoom-in-up" data-aos-duration="600">
-              <h1>
-                PROJECTS
-              </h1>
-              <hr class="white">
-              <h3 class="description">
-                This is what I've made in my free time
-              </h3>
+              <h1> PAST WORK </h1>
+              <hr class="black">
+              <h3 class="description"> Projects and Internships I've done in the past </h3>
             </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 text-center project-top" data-aos="fade-up-right" data-aos-duration="600">
+              <h2> FAPL </h2>
+              <h4> JUNE 2016 - SEPT 2016 </h4>
+              <div class="block">
+                <img id="fapl" src="assets/img/fapl.png" alt="" height="75px">
+              </div>
+              <h4> MADE WITH: IONIC, ANGULARJS, NODE.JS </h4>
+              <div class="project_body">
+                <h3 class="project_desc"> Startup for a platform that allows users to buy products with one tap and monetize photos of themselves. </h2>
+                <a class="btn btn-default btn-lg project_btn" href="https://fapl.co" target=_blank"> LAUNCH SITE </a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center project-top" data-aos="fade-up-left" data-aos-duration="600">
+              <h2> THETA TAU APP </h2>
+              <h4> NOVEMBER 2016 </h2>
+              <div class="block" id="theta-tau">
+                <img class="project_img" src="assets/img/tt_app.png" alt="" height="200px">
+              </div>
+              <h4> MADE WITH: IONIC, ANGULARJS, FIREBASE </h4>
+              <div class="project_body">
+                <h3 class="project_desc"> Hybrid mobile application that allows pledges to communicate with each other and navigate to events. </h2>
+                <a class="btn btn-default btn-lg project_btn"> SEE MORE </a>
+              </div>
+            </div>
+            <div class="col-lg-1"></div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 text-center project-bot" data-aos="fade-up-right" data-aos-duration="600">
+              <h2> BULB </h2>
+              <h4> OCTOBER 2016 </h4>
+              <div class="block" id="bulb">
+                <img class="project_img" src="assets/img/bulb.png" alt="" height="200px">
+              </div>
+              <h4> MADE WITH: IONIC, ANGULARJS, FIREBASE </h4>
+              <div class="project_body">
+                <h3 class="project_desc"> Hybrid mobile application that helps hackers collaborate with other hackers from around the world. </h3>
+                <a class="btn btn-default btn-lg project_btn"> SEE MORE </a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center project-bot" data-aos="fade-up-left" data-aos-duration="600">
+              <h2> POKEMON THROW </h2>
+              <h4> AUGUST 2016 </h4>
+              <div class="block" id="pokemon">
+                <img class="project_img" src="assets/img/pokemon_throw.png" alt="" height="200px">
+              </div>
+              <div class="project_body">
+                <h3 class="project_desc"> Plugin for the game, Pokemon GO, that allows players to throw Pokeballs by flicking the phone forward. </h3>
+                <a class="btn btn-default btn-lg project_btn"> SEE MORE </a>
+              </div>
+              <h4> MADE WITH: ANDROID STUDIOS </h4>
+            </div>
+            <div class="col-lg-1"></div>
           </div>
         </div>
       </section>
@@ -163,13 +213,164 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center" data-aos="zoom-in-up" data-aos-duration="600">
-              <h1>
-                SKILLS
-              </h1>
+              <h1> SKILLS </h1>
               <hr class="black">
-              <h3 class="description">
-                Languages and Technologies I use
-              </h3>
+              <h3 class="description"> Languages and Technologies I use </h3>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-12 text-center" data-aos="fade-up" data-aos-duration="600">
+              <h2> Current Favorites </h2>
+            </div>
+          </div>
+          
+          <div class="row" id="curr_fav">
+            <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="600">
+              <img src="assets/img/angular.png" alt="" height="100px">
+              <h4> ANGULARJS </h4>
+            </div>
+            <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="600">
+              <img src="assets/img/ionic.png" alt="" height="100px">
+              <h4> IONIC </h4>
+            </div>
+            <div class="col-lg-4 text-center" data-aos="fade-up" data-aos-duration="600">
+              <img src="assets/img/firebase.png" alt="" height="100px">
+              <h4> FIREBASE </h4>
+            </div>
+          </div>
+
+          <div class="row" id="languages">
+            <div class="col-lg-6 text-center">
+              <div class="row">
+                <h2 data-aos="fade-up" data-aos-duration="600"> Languages </h2>
+                <div class="col-lg-10 skills_img" data-aos="zoom-in" data-aos-duration="600">
+                  <div class="wrapper">
+                    <div id="code"></div>
+                    <div class="shadow"></div>
+                  </div>
+                </div>
+                <div class="col-lg-2 click_me" data-aos="fade-left" data-aos-duration="600">
+                  <img src="assets/img/click.png" alt="" height="75px">
+                </div>
+              </div>
+              
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="200" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="250" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> HTML </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> CSS </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> JAVASCRIPT </h4>
+                </div>
+              </div>
+
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="250" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> C </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> C++ </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> JAVA </h4>
+                </div>
+              </div>
+
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> PYTHON </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> JQUERY </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> MATLAB </h4>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 text-center">
+              <div class="row">
+                <h2 data-aos="fade-up" data-aos-duration="600"> Technologies </h2>
+                <div class="col-lg-10 skills_img" data-aos="zoom-in" data-aos-duration="600">
+                  <div class="wrapper">
+                    <div id="tools"></div>
+                    <div class="shadow"></div>
+                  </div>
+                </div>
+                <div class="col-lg-2 click_me" data-aos="fade-left" data-aos-duration="600">
+                  <img src="assets/img/click.png" alt="" height="75px">
+                </div>
+              </div>
+
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="200" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="250" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> ANGULAR </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> IONIC </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> FIREBASE </h4>
+                </div>
+              </div>
+
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="250" data-aos-duration="600">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> ANDROID </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> NODE </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> BOOTSTRAP </h4>
+                </div>
+              </div>
+
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3 text-left">
+                <img src="assets/img/star.png" alt="" height="30px" data-aos="fade-up-right" data-aos-delay="300" data-aos-duration="600">
+              </div>
+              <div class="col-lg-8">
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> EXPRESS </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> MONGODB </h4>
+                </div>
+                <div class="col-lg-4">
+                  <h4 data-aos="fade-up-left" data-aos-offset="110" data-aos-duration="600"> REACT </h4>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -180,13 +381,9 @@
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center" data-aos="zoom-in-up" data-aos-duration="600">
-              <h1>
-                CONTACT ME
-              </h1>
+              <h1> CONTACT ME </h1>
               <hr class="white">
-              <h3 class="description">
-                Let's have a chat!
-              </h3>
+              <h3 class="description"> Connect with me! </h3>
             </div>
           </div>
         </div>
