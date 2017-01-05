@@ -424,12 +424,14 @@ h1 {
   z-index: 1;
   background: url('../assets/img/code-click.png') no-repeat;
   background-size: auto 100px;
+  transition: background 0.3s ease-in-out;
 }
 .wrapper:active #tools {
   height: 100px;
   z-index: 1;
   background: url('../assets/img/tools-click.png') no-repeat;
   background-size: auto 100px;
+  transition: background 0.3s ease-in-out;
 }
 
 #code {
@@ -438,6 +440,7 @@ h1 {
   background: url('../assets/img/code.png') no-repeat;
   background-size: auto 100px;
   animation: jump 1s infinite;
+  transition: background 0.3s ease-in-out;
 }
 
 #tools {
@@ -447,6 +450,7 @@ h1 {
   background: url('../assets/img/tools.png') no-repeat;
   background-size: auto 100px;
   animation: jump 1s infinite;
+  transition: background 0.3s ease-in-out;
 }
 
 .shadow {
@@ -553,6 +557,60 @@ h1 {
   height: 900px;
   color: #fff;
   background-color: #2f4f4f;
+}
+
+#contact input, textarea {
+  width: 100%;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+#contact textarea {
+  height: 300px;
+}
+
+#contact label {
+  width: 100%;
+  font-size: 25px;
+  text-align: left;
+}
+
+#contact input.submit_btn {
+  width: 120px;
+  margin-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: #2f4f4f;
+  background-color: #fff;
+  border-radius: 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#contact input.submit_btn:hover,
+#contact input.submit_btn:focus {
+  color: #2f4f4f;
+  transform: scale(1.1);
+}
+
+/******************************************************************* Footer *******************************************************************************/
+footer {
+  height: 50px;
+  color: #000;
+  padding-top: 5px; 
+  background-color: #fff;
+  text-align: center;
+}
+
+footer h4 {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+footer img {
+  margin-bottom: 5px;
 }
 
 /************************************************************** Fade-in animation *************************************************************************/
