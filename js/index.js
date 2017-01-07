@@ -30,6 +30,9 @@ $(document).ready(function() {
   if ( window.innerWidth <= 768 ) {
     $('.project-top').attr('data-aos', 'fade-up');
     $('.project-bot').attr('data-aos', 'fade-up');
-    $('#skills #languages h4').attr('data-aos', 'fade-up');
+    $('#skills #languages h4').attr('data-aos', 'zoom-in');
+  }
+  else {
+    $('#skills .click_me img').attr('data-aos', 'fade-left');
   }
 });
