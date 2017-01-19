@@ -68,6 +68,5 @@ $(document).ready(function() {
     $('.navbar-custom').removeAttr('data-offset-top');
     $('.navbar-custom').removeClass('navbar-static-top');
     $('.navbar-custom').addClass('navbar-fixed-top');
-    $('.navbar-custom').css('top', 0);
   }
 });

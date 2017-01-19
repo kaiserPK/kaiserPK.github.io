@@ -223,6 +223,10 @@ h1 {
 }
 
 @media(max-width: 768px) {
+  .navbar-custom {
+    top: 0;
+  }
+
   .icon-bar {
     background-color: #fff;
   }
