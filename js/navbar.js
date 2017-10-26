@@ -11,27 +11,23 @@ $(window).scroll(function() {
   if ( window.innerWidth > 768 ) {
     if ( $(this).scrollTop() > 755 ) {
       $('#content').css('padding-top', 80);
-      $('.navbar-custom').css('background-color', 'white');
-      $('.navbar-custom .nav li > a').css('color', 'black');
-      $('.icon-bar').css('background-color', 'black');
+      $("body").get(0).style.setProperty("--primary-color", "black");
+      $("body").get(0).style.setProperty("--secondary-color", "white");
     }
     else {
       $('#content').css('padding-top', 0);
-      $('.navbar-custom').css('background-color', 'black');
-      $('.navbar-custom .nav li > a').css('color', 'white');
-      $('.icon-bar').css('background-color', 'white');
+      $("body").get(0).style.setProperty("--primary-color", "white");
+      $("body").get(0).style.setProperty("--secondary-color", "black");
     }
   }
   else {
     if ( $(this).scrollTop() > 575 ) {
-      $('.navbar-custom').css('background-color', 'white');
-      $('.navbar-custom .nav li > a').css('color', 'black');
-      $('.icon-bar').css('background-color', 'black');
+      $("body").get(0).style.setProperty("--primary-color", "black");
+      $("body").get(0).style.setProperty("--secondary-color", "white");
     }
     else {
-      $('.navbar-custom').css('background-color', 'black');
-      $('.navbar-custom .nav li > a').css('color', 'white');
-      $('.icon-bar').css('background-color', 'white');
+      $("body").get(0).style.setProperty("--primary-color", "white");
+      $("body").get(0).style.setProperty("--secondary-color", "black");
     }
   }
 });
@@ -48,11 +44,10 @@ $('.scroll-down').click(function(event) {
 });
 
 /* smooth scrolling for nav sections */
-$('.navbar-custom .navbar-nav li > a').click(function(event) {
+$('.scroller').click(function(event) {
   var link = $(this).attr('href');
   if ( $(window).scrollTop() > 755 ) {
     var pos = $(link).offset().top - 70;
-    console.log("HI");
   }
   else {
     var pos = $(link).offset().top - 83;
@@ -61,6 +56,15 @@ $('.navbar-custom .navbar-nav li > a').click(function(event) {
   $('.navbar-collapse').collapse('hide');
   event.preventDefault();
 });
+
+$('.navbar-custom .navbar-nav li > a').hover(function(event) {
+  if (window.innerWidth > 768) {
+    event
+      .target
+      .classList
+      .toggle('underline');
+  }
+})
 
 $(document).ready(function() {
   if ( window.innerWidth <= 768 ) {
