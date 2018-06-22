@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'LeagueSpartan-Bold';
+  src: url('../fonts/LeagueSpartan-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body, html {
   padding: 0;
   margin: 0;
@@ -45,8 +52,8 @@ h1 {
 }*/
 
   #intro #intro-name {
-    font-family: 'Alegreya Sans SC', Helvetica, sans-serif;
-    font-size: 120px;
+    font-family: 'LeagueSpartan-Bold', Helvetica, sans-serif;
+    font-size: 100px;
   }
   
   #intro #intro-body {
@@ -116,7 +123,7 @@ h1 {
 
 @media(max-width: 768px) {
   #intro #intro-name {
-    font-size: 70px;
+    font-size: 50px;
   }
   
   #landscape {
@@ -173,8 +180,9 @@ h1 {
 /******************************************************************* Navbar *****************************************************************************/
 .navbar-custom {
   padding-bottom: 8px;
-  background-color: #000;
+  background-color: var(--secondary-color);
   border-bottom: #000 solid;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-custom.affix {
   top: 0;
@@ -199,8 +207,9 @@ h1 {
 
 @media(min-width: 768px) {
   .navbar-custom {
-    top: -66px;
-    background-color: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    margin-top: -66px;
     padding-top: 8px;
     -webkit-transition: background .3s ease-in-out, padding .3s ease-in-out;
     -moz-transition: background .3s ease-in-out, padding .3s ease-in-out;
@@ -377,8 +386,8 @@ h1 {
 
 #pint {
   object-fit: cover;
-  height: 294px;
-  width: 444px;
+  height: 100%;
+  width: 100%;
 }
 
 #theta-tau {
@@ -424,7 +433,7 @@ h1 {
 
   .block {
     height: 270px;
-    width: 360px;
+    width: 90vw;
   }
 
   .project_body {
@@ -745,6 +754,8 @@ h1 {
 }
 
 .social_btn {
+  display: inline-block;
+  font-size: 2em;
   height: 50px;
   width: 50px;
   padding-top: 7px;

@@ -8,14 +8,14 @@ var WIDTH = window.innerWidth,
     gradient = null,
     pixies = new Array();
     
-    function setDimensions(e) {
-      WIDTH = window.innerWidth;
-      HEIGHT = window.innerHeight;
-      container.style.width = WIDTH+'px';
-      container.style.height = HEIGHT+'px';
-      canvas.width = WIDTH;
-      canvas.height = HEIGHT - 100;
-    }
+function setDimensions(e) {
+  WIDTH = window.innerWidth;
+  HEIGHT = window.innerHeight;
+  container.style.width = WIDTH+'px';
+  container.style.height = HEIGHT+'px';
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT - 100;
+}
     
 setDimensions();
 

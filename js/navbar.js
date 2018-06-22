@@ -10,12 +10,10 @@ $('body').scrollspy({ target: '.navbar-custom', offset: -60 })
 $(window).scroll(function() {
   if ( window.innerWidth > 768 ) {
     if ( $(this).scrollTop() > 755 ) {
-      $('#content').css('padding-top', 80);
       $("body").get(0).style.setProperty("--primary-color", "black");
       $("body").get(0).style.setProperty("--secondary-color", "white");
     }
     else {
-      $('#content').css('padding-top', 0);
       $("body").get(0).style.setProperty("--primary-color", "white");
       $("body").get(0).style.setProperty("--secondary-color", "black");
     }
@@ -27,7 +25,7 @@ $(window).scroll(function() {
     }
     else {
       $("body").get(0).style.setProperty("--primary-color", "white");
-      $("body").get(0).style.setProperty("--secondary-color", "black");
+      $("body").get(0).style.setProperty("--secondary-color", "rgba(0, 0, 0, 0.8)");
     }
   }
 });
