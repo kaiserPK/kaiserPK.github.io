@@ -1,5 +1,5 @@
-var WIDTH = window.innerWidth,
-    HEIGHT = window.innerHeight,
+var WIDTH = $(window).width(),
+    HEIGHT = $(window).height(),
     MAX_PARTICLES = 100,
     DRAW_INTERVAL = 60,
     container = document.querySelector('#canvas-wrap'),
@@ -9,8 +9,8 @@ var WIDTH = window.innerWidth,
     pixies = new Array();
     
 function setDimensions(e) {
-  WIDTH = window.innerWidth;
-  HEIGHT = window.innerHeight;
+  WIDTH = $(window).width();
+  HEIGHT = $(window).height();
   container.style.width = WIDTH+'px';
   container.style.height = HEIGHT+'px';
   canvas.width = WIDTH;
