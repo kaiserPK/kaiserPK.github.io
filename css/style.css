@@ -224,8 +224,8 @@ h1 {
     height: 60px;
     width: 60px;
     padding-top: 6px;
-    margin-left: 6vw;
-    margin-right: 6vw;
+    margin-left: 2em;
+    margin-right: 2em;
     color: #2f4f4f;
     background-color: #fff;
     border-radius: 50%;
@@ -238,6 +238,7 @@ h1 {
   #intro .move_btn:hover,
   #intro .move_btn:focus {
     background-color: #ddd;
+    transform: translateY(2px);
   }
 
     #intro .move_btn.left {
@@ -642,6 +643,11 @@ h1 {
 @media(max-width: 768px) {
   #intro #intro-name {
     font-size: 50px;
+  }
+
+  #intro #intro-body {
+    width: 250px;
+    margin: auto;
   }
   
   #landscape {

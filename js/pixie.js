@@ -138,8 +138,8 @@ $(document).ready(function(){
     var og = parseInt($grass.css('background-position').substr(0, $grass.css('background-position').search(' ')));
 
     if (activeMotion === 'left') {
-      $landscape.css('background-position', om+(30/10)+'px 0px');
-      $grass.css('background-position', og+(30/4)+'px 0px');
+      $landscape.css('background-position', om+(20/10)+'px 0px');
+      $grass.css('background-position', og+(20/4)+'px 0px');
       rotation -= 3;
       if (rotation < -360) {
         rotation = 0;
@@ -147,8 +147,8 @@ $(document).ready(function(){
       $sphere.css('transform', 'rotate('+rotation+'deg)');
     }
     else if (activeMotion === 'right') {
-      $landscape.css('background-position', om+(-30/10)+'px 0px');
-      $grass.css('background-position', og+(-30/4)+'px 0px');
+      $landscape.css('background-position', om+(-20/10)+'px 0px');
+      $grass.css('background-position', og+(-20/4)+'px 0px');
       rotation += 3;
       if (rotation > 360) {
         rotation = 0;
