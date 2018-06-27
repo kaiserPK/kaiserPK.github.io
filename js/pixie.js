@@ -94,17 +94,139 @@ $(document).ready(function(){
   var $landscape = $('#landscape');
   var $grass = $('#grass');
   var $container = $('#canvas-wrap');
-  $container.mousedown(function(ev){
-    var ox = ev.clientX;
+  var $leftButton = $('#move_btns .move_btn.left');
+  var $rightButton = $('#move_btns .move_btn.right');
+  // BB-8 Parts
+  var $sphere = $('.sphere');
+  var topPart = document.querySelector('.top-part');
+  var activeMotion;
+  var timeout;
+  var rotation = 0;
+
+  // Background animation using mouse
+  // $container.mousedown(function(ev){
+  //   var ox = ev.clientX;
+  //   var om = parseInt($landscape.css('background-position').substr(0, $landscape.css('background-position').search(' ')));
+  //   var og = parseInt($grass.css('background-position').substr(0, $grass.css('background-position').search(' ')));
+  //   $container.mousemove(function(e){
+  //     $landscape.css('background-position', om+((e.clientX-ox)/10)+'px 0px');
+  //     $grass.css('background-position', og+((e.clientX-ox)/4)+'px 0px');
+  //   });
+  //   $container.mouseup(function(){
+  //     $container.unbind('mousemove');
+  //     $container.unbind('mouseup');
+  //   });
+  // });
+
+  // Background animation using key press
+
+  function parseKeyCode(e) {
+    var result = 0;
+    switch (e.keyCode) {
+      case 37:
+        result = 'left';
+        break;
+      case 39:
+        result = 'right';
+        break;
+    }
+    return result;
+  }
+
+  var animate = function() {
     var om = parseInt($landscape.css('background-position').substr(0, $landscape.css('background-position').search(' ')));
     var og = parseInt($grass.css('background-position').substr(0, $grass.css('background-position').search(' ')));
-    $container.mousemove(function(e){
-      $landscape.css('background-position', om+((e.clientX-ox)/10)+'px 0px');
-      $grass.css('background-position', og+((e.clientX-ox)/4)+'px 10px');
-    });
-    $container.mouseup(function(){
-      $container.unbind('mousemove');
-      $container.unbind('mouseup');
-    });
+
+    if (activeMotion === 'left') {
+      $landscape.css('background-position', om+(30/10)+'px 0px');
+      $grass.css('background-position', og+(30/4)+'px 0px');
+      rotation -= 3;
+      if (rotation < -360) {
+        rotation = 0;
+      }
+      $sphere.css('transform', 'rotate('+rotation+'deg)');
+    }
+    else if (activeMotion === 'right') {
+      $landscape.css('background-position', om+(-30/10)+'px 0px');
+      $grass.css('background-position', og+(-30/4)+'px 0px');
+      rotation += 3;
+      if (rotation > 360) {
+        rotation = 0;
+      }
+      $sphere.css('transform', 'rotate('+rotation+'deg)');
+    }
+
+    timeout = setTimeout(animate, 10);
+  }
+
+  $(document).keydown(function(e) {
+    var direction = parseKeyCode(e);
+    if ((e.which === 37 || e.which === 39) && activeMotion !== direction) {
+      activeMotion = direction;
+      clearTimeout(timeout);
+      animate();
+    }
+  }).keyup(function() {
+    activeMotion = null;
   });
+
+  $leftButton.mousedown(function(e) {
+    var direction = 'left';
+    if (activeMotion !== direction) {
+      activeMotion = direction;
+      clearTimeout(timeout);
+      animate();
+      controlAnimation(topPart, direction);
+    }
+  }).mouseup(function() {
+    activeMotion = null;
+    controlAnimation(topPart, 'stop');
+  });
+
+  $rightButton.mousedown(function(e) {
+    var direction = 'right';
+    if (activeMotion !== direction) {
+      activeMotion = direction;
+      clearTimeout(timeout);
+      animate();
+      controlAnimation(topPart, direction);
+    }
+  }).mouseup(function() {
+    activeMotion = null;
+    controlAnimation(topPart, 'stop');
+  });
+
+  function controlAnimation() {
+    var args = [].slice.call(arguments);
+    var elements = args.slice(0, -1);
+    var animationSetting = args[args.length - 1];
+    elements.forEach(function(elem) {
+      if (animationSetting !== 'stop') {
+        if (animationSetting === 'right') {
+          elem.classList.add('move-right');
+        }
+        else if (animationSetting === 'left') {
+          elem.classList.add('move-left');
+        }
+      }
+      else {
+        elem.classList.contains('move-right')
+          ? elem.classList.remove('move-right')
+          : elem.classList.remove('move-left');
+      }
+    });
+  }
+
+  function handleKeyDown(e) {
+    var direction = parseKeyCode(e);
+    controlAnimation(topPart, direction);
+  }
+
+  function handleKeyUp(e) {
+    controlAnimation(topPart, 'stop');
+  }
+
+  document.addEventListener('keydown', handleKeyDown);
+  document.addEventListener('keyup', handleKeyUp);
+
 });

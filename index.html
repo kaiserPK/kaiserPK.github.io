@@ -17,14 +17,57 @@
     <header id="intro">
       <div id="canvas-wrap">
         <canvas id="pixie"></canvas>
-        <div id="ShootingStarParams"></div>
+        <span class="star"></span>
+        <span class="star pink"></span>
+        <span class="star blue"></span>
+        <span class="star yellow"></span>
         <div class="parallax-layer" id="landscape" data-parallax-speed="0.5" data-max-scroll="900"></div>
         <div class="parallax-layer" id="grass" data-parallax-speed="1" data-max-scroll="900"></div>
         <div class="parallax-layer" id="moon" data-parallax-speed="1.8" data-max-scroll="900"></div>
         <div class="parallax-layer" id="sun" data-parallax-speed="2" data-max-scroll="900"></div>
+        <div class="parallax-layer" id="bb8" data-parallax-speed="1" data-max-scroll="900">
+          <div class="top-part">
+            <div class="antenna short"></div>
+            <div class="antenna long"></div>
+            <div class="head">
+              <div class="head-circle">
+                <div class="head-top-lines"></div>
+                <div class="eye-circle"><div class="eye-inner circle"></div></div>
+                <div class="right-circle"></div>
+                <div class="bottom-row-details">
+                  <div class="rect wide"></div>
+                  <div class="rect narrow"></div>
+                  <div class="rect wide"></div>
+                  <div class="rect narrow"></div>
+                  <div class="small circle"></div>
+                  <div class="rect short"></div>
+                  <div class="rect wide"></div>
+                </div>
+              </div>
+            </div>
+            <div class="head-bottom">
+              <div class="head-bottom-inner"></div>
+            </div>
+          </div>
+          <div class="sphere">
+            <div class="part top left"></div>
+            <div class="part top right"></div>
+            <div class="part bottom left"></div>
+            <div class="part bottom right"></div>
+            <div class="center"><i class="far fa-life-ring fa-7x"></i></div>
+            <div class="semi-circle top"></div>
+            <div class="semi-circle right"></div>
+            <div class="semi-circle bottom"></div>
+            <div class="semi-circle left"></div>
+          </div>
+        </div>
         <div class="col-lg-12" id="overlay">
           <h1 id="intro-name"> KAISER KIM </h1>
           <p id="intro-body"> Web Developer </p>
+          <div class="visible-lg" id="move_btns">
+            <i class="icon-angle-left move_btn left"></i>
+            <i class="icon-angle-right move_btn right"></i>
+          </div>
         </div>
       </div>
     </header>
@@ -90,7 +133,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md interest-margin" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+            <div class="col-lg-3 text-center visible-lg interest-margin" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
               <h3><strong> Organization </strong></h3>
               <img src="assets/img/tt.png" height="100px" alt="">
               <h4><i> Theta Tau </i></h4>
@@ -99,7 +142,7 @@
             <div class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="600">
               <img src="assets/img/me.jpg" class="img-circle" height="250" alt="">
             </div>
-            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md interest-margin" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
+            <div class="col-lg-3 text-center visible-lg interest-margin" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="250" data-aos-duration="600">
               <h3><strong> Favorite Food </strong></h3>
               <img src="assets/img/sushi.png" height="100px" alt="">
               <h4><i> Sushi </i></h4>
@@ -107,7 +150,7 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+            <div class="col-lg-3 text-center visible-lg" data-aos="fade-up-right" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
               <h3><strong> Hobby </strong></h3>
               <img src="assets/img/drawing.png" height="100px" alt="">
               <h4><i> Drawing </i></h4>
@@ -120,7 +163,7 @@
               </h3>
               <h3> My <span class="red"> DREAM </span> is to build a product that can have a lasting <span class="red"> IMPACT </span> on others. </h3>
             </div>
-            <div class="col-lg-3 text-center hidden-xs hidden-sm hidden-md" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
+            <div class="col-lg-3 text-center visible-lg" data-aos="fade-up-left" data-aos-delay="200" data-aos-offset="225" data-aos-duration="600">
               <h3><strong> Basketball Team </strong></h3>
               <img src="assets/img/pelicans.png" height="100px" alt="">
               <h4><i> Pelicans </i></h4>
@@ -458,7 +501,6 @@
     <script src="js/parallax.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/pixie.js"></script>
-    <script src="js/shootingstar.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/index.js"></script>
 
