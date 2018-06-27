@@ -987,12 +987,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-#code, #tools, .shadow {
-  height: 150px;
-  width: 120px;
-  position: absolute;
-}
-
 .wrapper {
   height: 150px;
   width: 120px;
@@ -1002,41 +996,42 @@ h1 {
 .wrapper:hover {
   transform: scale(0);
 }
+
 .wrapper:hover #code {
-  height: 100px;
-  z-index: 1;
   background: url('../assets/img/code-hover.png') no-repeat;
-  background-size: auto 100px;
-  transition: background 0.3s ease-in-out;
 }
+
 .wrapper:hover #tools {
-  height: 100px;
-  z-index: 1;
   background: url('../assets/img/tools-hover.png') no-repeat;
-  background-size: auto 100px;
-  transition: background 0.3s ease-in-out;
 }
 
 #code {
-  height: 100px;
-  z-index: 1;
   background: url('../assets/img/code.png') no-repeat;
-  background-size: auto 100px;
-  animation: jump 1s infinite;
-  transition: background 0.3s ease-in-out;
 }
 
 #tools {
-  height: 100px;
   margin-left: 10px;
-  z-index: 1;
   background: url('../assets/img/tools.png') no-repeat;
-  background-size: auto 100px;
+}
+
+#code, #tools {
+  height: 100px;
+  width: 120px;
+  position: absolute;
   animation: jump 1s infinite;
   transition: background 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.wrapper:hover #code,
+.wrapper:hover #tools,
+#code,
+#tools {
+  background-size: auto 100px;
 }
 
 .shadow {
+  position: absolute;
   height: 50px;
   width: 40px;
   bottom: 0;
@@ -1161,38 +1156,26 @@ h1 {
     margin-top: 20px;
   }
 
-  #code, #tools, .shadow {
-    height: 115px;
-    width: 90px;
-  }
-
   .wrapper {
     height: 115px;
     width: 90px;
     margin-left: 145px;
   }
-  .wrapper:active #code {
-    height: 70px;
-    background-size: auto 70px;
-  }
-  .wrapper:active #tools {
-    height: 70px;
+  .wrapper:hover #code,
+  .wrapper:hover #tools,
+  #code,
+  #tools {
     background-size: auto 70px;
   }
 
-  #code {
+  #code,
+  #tools {
     height: 70px;
-    background-size: auto 70px;
+    width: 90px;
   }
 
   #tools_mobile {
     margin-top: 120px;
-  }
-
-  #tools {
-    height: 70px;
-    margin-left: 10px;
-    background-size: auto 70px;
   }
 
   .shadow {
